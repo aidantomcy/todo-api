@@ -38,7 +38,7 @@ func crud() http.HandlerFunc {
 			}
 			w.WriteHeader(http.StatusOK)
 			json.NewEncoder(w).Encode(struct {
-				Status string `json:status`
+				Status string `json:"status"`
 			}{"Item deleted"})
 		}
 	}
